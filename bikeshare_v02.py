@@ -187,6 +187,7 @@ def display_data(df):
     start_loc = 0
     if view_data.lower()=='yes':
         while (start_loc <= df.size-5):
+            pd.set_option(“display.max_columns”,200) #see all columns by chekcing data
             print(df.iloc[start_loc:start_loc+5])
             start_loc += 5
             view_display = input("Do you wish to continue? Enter yes or no?").lower()
