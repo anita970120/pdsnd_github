@@ -188,11 +188,18 @@ def display_data(df):
     start_loc = 0
     if view_data.lower()=='yes':
         while (start_loc <= df.size-5):
+            pd.set_option(“display.max_columns”,200) #see all columns by chekcing data
             print(df.iloc[start_loc:start_loc+5])
             start_loc += 5
             view_display = input("Do you wish to continue? Enter yes or no?").lower()
             if view_display == 'no':
                 break
+    # while True:
+    # display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+    # if display_data.lower() != 'yes':
+    #     break
+    # print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers ="keys"))
+    # i+=5
 
 def main():
     while True:
