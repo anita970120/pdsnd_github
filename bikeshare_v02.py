@@ -193,6 +193,12 @@ def display_data(df):
             view_display = input("Do you wish to continue? Enter yes or no?").lower()
             if view_display == 'no':
                 break
+    # while True:
+    # display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+    # if display_data.lower() != 'yes':
+    #     break
+    # print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers ="keys"))
+    # i+=5
 
 def main():
     while True:
